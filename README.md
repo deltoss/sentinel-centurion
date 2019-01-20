@@ -27,17 +27,17 @@
 A [Laravel](https://github.com/laravel/laravel) package that provides opinionated authentication scaffolding using [Cartalyst Sentinel](https://cartalyst.com/manual/sentinel/2.0). It provides various features out of the box, and is designed so that you can extend pretty much anything such as the layout, routes, controllers actions, views, and so on.
 
 # Features
-* __Login__
-* __Registration with Activation Workflow__
-* __Forgot Password Workflow__
-* __User Management__
-* __Role Management__
-* __Ability/Permission Management__
-* __Activate/Deactivate Users__
-* __Google reCAPTCHA__
-* __Administrators can Register Users__
-* __Authentication and Authorisation Middleware__
-* __Localisation__
+* Login
+* Registration with Activation Workflow
+* Forgot Password Workflow
+* User Management
+* Role Management
+* Ability/Permission Management
+* Activate/Deactivate Users
+* Google reCAPTCHA
+* Administrators can Register Users
+* Authentication and Authorisation Middleware
+* Localisation
 
 # <a name="requirements"></a>Requirements
 * Sentinal Database Permissions
