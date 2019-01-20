@@ -1,0 +1,23 @@
+.divider {
+    margin: 1em 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+.divider:before, .divider:after {
+    background-color: #e5e5e5;
+    content: "";
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: 40%;
+    height: 1px;
+}
+.divider:before {
+    margin-left: -47.5%;
+    margin-right: 2.5%;
+}
+.divider:after {
+    margin-right: -47.5%;
+    margin-left: 2.5%;
+}

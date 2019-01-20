@@ -1,0 +1,127 @@
+.sortable {
+    max-height: 350px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sortable .table td {
+    vertical-align: middle;
+}
+
+/*
+    We want to apply border top only to the first VISIBLE table row.
+    Sortable.js inserts an invisble table row as the first row when
+    user drags the first item. The pseudo-selector of ":first-child"
+    would not work in this case, as it'll select the invisible table
+    row instead of the visible table row.
+
+    For more information, see:
+        https://stackoverflow.com/questions/2717480/css-selector-for-first-element-with-class
+*/
+.sortable .table tr:not([style*="display: none"]) > td {
+    border-top: none;    
+}
+.sortable .table tr:not([style*="display: none"]) ~ tr:not([style*="display: none"]) > td {
+    border-top: 1px solid #ddd;
+}
+
+.sortable .table tr:first-child > td:first-child {
+    border-top-left-radius: 6px;
+}
+
+.sortable .table tr:first-child > td:last-child {
+    border-top-right-radius: 6px;
+}
+
+.sortable .table tr:last-child > td {
+    border-bottom: none;    
+}
+
+.sortable .table tr:last-child > td:first-child {
+    border-bottom-left-radius: 6px;
+}
+
+.sortable .table tr:last-child > td:last-child {
+    border-bottom-right-radius: 6px;
+}
+
+.sortable .item {
+    cursor: move;
+    cursor: -webkit-grabbing;
+}
+
+.list-container {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 30px;
+}
+
+.empty-list {
+    border: 2px dashed silver;
+    min-height: 40px;
+    position: relative;
+}
+
+    .empty-list::before {
+        color: #ccc;
+        font-size: 40px;
+        content: 'Drop Here';
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .empty-list > * {
+        display: none;
+    }
+
+.pulsate {
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: pulsate 1s ease-out;
+    -moz-animation-iteration-count: infinite;
+    animation: pulsate 1s ease-out;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@-moz-keyframes pulsate {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}

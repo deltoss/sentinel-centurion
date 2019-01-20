@@ -1,0 +1,289 @@
+/* For bootstrap compatibility */
+.tristate > input[type="radio"] + i,
+.tristate > input[type="radio"] + i,
+.tristate > input[type="radio"] + i:before,
+.tristate > input[type="radio"] + i:after {
+    -webkit-box-sizing: unset;
+    -moz-box-sizing: unset;
+    box-sizing: unset;
+}
+
+.tristate {
+    position: relative;
+    display: inline-block;;
+}
+.tristate > input[type="radio"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+.tristate > input[type="radio"] + i {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: top;
+}
+.tristate > input[type="radio"] + i, 
+.tristate > input[type="radio"] + i:before, 
+.tristate > input[type="radio"] + i:after {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.tristate > input[type="radio"]:first-child {
+    z-index: 10;
+}
+.tristate > input[type="radio"]:first-child:checked {
+    z-index: 0;
+}
+.tristate > input[type="radio"]:checked + input[type="radio"] {
+    z-index: 10;
+}
+.tristate > input[type="radio"]:checked + i + label,
+.tristate > input[type="radio"]:checked + i + label + label {
+    display: none;
+}
+.tristate > input[type="radio"]:checked + input[type="radio"] + i + label,
+.tristate > input[type="radio"]:checked + input[type="radio"] + i + label + label + label {
+    display: none;
+}
+.tristate > input[type="radio"]:checked + input[type="radio"] + input[type="radio"] + i + label + label, 
+.tristate > input[type="radio"]:checked + input[type="radio"] + input[type="radio"] + i + label + label + label {
+    display: none;
+}
+
+.tristate-checkbox > input[type="radio"] + i {
+    border: solid 2px #bdbdbd;
+    border-radius: 3px;
+}
+.tristate-checkbox > input[type="radio"] + i:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    background-color: #8b8b8b;
+    border-radius: 3px;
+}
+.tristate-checkbox > input[type="radio"] + i:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 4px;
+    top: 7px;
+    color: white;
+    border-bottom: solid 3px;
+    opacity: 0;
+}
+/* On State */
+.tristate-checkbox > input[type="radio"]:checked + i {
+    background-color: #009688;
+}
+.tristate-checkbox > input[type="radio"]:checked + i:before {
+    background-color: #009688;
+}
+.tristate-checkbox > input[type="radio"]:checked + i:after {
+    left: 1px;
+    top: 3px;
+    width: 14px;
+    height: 5px;
+    border-left: solid 3px;
+    border-bottom: solid 3px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    opacity: 1;
+}
+/* Null State */
+.tristate-checkbox > input[type="radio"]:checked + input[type="radio"] + i:after {
+    width: 10px;
+    height: 0px;
+    border-left: none;
+    border-bottom: solid 3px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    opacity: 1;
+}
+/* Off State */
+.tristate-checkbox > input[type="radio"]:checked + input[type="radio"] + input[type="radio"] + i:before {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+}
+
+.tristate-switcher > input[type="radio"] {
+    width: 46px;
+    height: 24px;
+    left: -3px;
+    top: -1px;
+}
+.tristate-switcher > input[type="radio"] + i {
+    width: 40px;
+    height: 16px;
+    margin-top: 2px;
+    background-color: #bdbdbd;
+    border-radius: 8px;
+}
+.tristate-switcher > input[type="radio"] + i:before {
+    content: ' ';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #fafafa;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 1px 8px 1px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 1px 8px 1px rgba(0, 0, 0, 0.3);
+}
+/* On State */
+.tristate-switcher > input[type="radio"]:checked + i {
+    background-color: #a5d7a7;
+}
+.tristate-switcher > input[type="radio"]:checked + i:before {
+    left: 19px;
+    background-color: #4caf50;
+}
+/* Null State */
+.tristate-switcher > input[type="radio"]:checked + input[type="radio"] + i:before {
+    left: 8px;
+}
+/* Off State */
+.tristate-switcher > input[type="radio"]:checked + input[type="radio"] + input[type="radio"] + i {
+    background-color: #f9a19a;
+}
+.tristate-switcher > input[type="radio"]:checked + input[type="radio"] + input[type="radio"] + i:before {
+    background-color: #f44336;
+}
+
+.tristate-rotate label {
+    display: inline-block;
+    padding-top: 3px;
+    padding-left: 3px;
+}
+.tristate-rotate > input[type="radio"] {
+    width: 30px;
+    height: 30px;
+}
+.tristate-rotate > input[type="radio"] + i {
+    width: 24px;
+    height: 24px;
+    margin: 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), inset 1px 1px 2px rgba(255, 255, 255, 0.4), inset -1px -1px 2px rgba(0, 0, 0, 0.4);
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), inset 1px 1px 2px rgba(255, 255, 255, 0.4), inset -1px -1px 2px rgba(0, 0, 0, 0.4);
+}
+.tristate-rotate > input[type="radio"] + i:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 3px;
+    height: 3px;
+    margin-left: -1px;
+    margin-top: -1px;
+    border-radius: 50%;
+    -webkit-box-shadow: -16px 0 0 #8b8b8b, 0 -16px 0 #8b8b8b, 16px 0 0 #8b8b8b;
+            box-shadow: -16px 0 0 #8b8b8b, 0 -16px 0 #8b8b8b, 16px 0 0 #8b8b8b;
+}
+.tristate-rotate > input[type="radio"] + i:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 10px;
+    margin-top: -1px;
+    border-bottom: solid 2px #666;
+    -webkit-transform-origin: 12px 50%;
+            transform-origin: 12px 50%;
+}
+/* State 3 (AKA On State) */
+.tristate-rotate > input[type="radio"]:checked + i:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+/* State 2 (AKA Null State) */
+.tristate-rotate > input[type="radio"]:checked + input[type="radio"] + i:after {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+/* State 1 (AKA Off State) */
+.tristate-rotate > input[type="radio"]:checked + input[type="radio"] + input[type="radio"] + i:after {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+
+.tristate-accept-deny-checkbox > input[type="radio"] + i {
+    border: solid 2px #bdbdbd;
+    border-radius: 3px;
+}
+.tristate-accept-deny-checkbox > input[type="radio"] + i:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    background-color: #8b8b8b;
+    border-radius: 3px;
+}
+.tristate-accept-deny-checkbox > input[type="radio"] + i:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 4px;
+    top: 7px;
+    color: white;
+    border-bottom: solid 3px;
+    opacity: 0;
+}
+/* On State */
+.tristate-accept-deny-checkbox > input[type="radio"]:checked + i {
+    background-color: #009688;
+}
+.tristate-accept-deny-checkbox > input[type="radio"]:checked + i:before {
+    background-color: #009688;
+}
+.tristate-accept-deny-checkbox > input[type="radio"]:checked + i:after {
+    left: 1px;
+    top: 3px;
+    width: 14px;
+    height: 5px;
+    border-left: solid 3px;
+    border-bottom: solid 3px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    opacity: 1;
+}
+/* Null State */
+.tristate-accept-deny-checkbox > input[type="radio"]:checked + input[type="radio"] + i:before {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+}
+/* Off State */
+.tristate-accept-deny-checkbox > input[type="radio"]:checked + input[type="radio"] + input[type="radio"] + i:before {
+    background-color: #f44336;
+}
+.tristate-accept-deny-checkbox > input[type="radio"]:checked + input[type="radio"] + input[type="radio"] + i:after {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    content: 'X';
+    font-size: 12pt;
+    font-style: normal;
+    font-weight: 900;
+    left: 2.5px;
+    top: -2px;
+    opacity: 1;
+    border: none;
+}

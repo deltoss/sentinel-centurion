@@ -1,0 +1,28 @@
+.popover-html-content {
+    display: none;
+}
+
+.btn-stack {
+    padding: 0;
+}			
+.btn-stack .popover-content {
+    padding: 0;
+}
+.btn-stack .btn {
+    padding: 7px 14px;
+    display: block;
+    width: 100%;
+    min-width: 100px;
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    border-radius: 0;
+}
+.btn-stack .btn:hover {
+    background-color: #ececec;
+}
+
+.btn-stack .btn {
+    border-radius: 5px;
+}

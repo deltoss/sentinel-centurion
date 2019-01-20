@@ -1,0 +1,108 @@
+/* Form Styling */
+.form-fieldset {
+    margin: 15px 15px 0 0px;
+}
+
+.form-fieldset legend {
+    font-size: 1.2em;
+    color: #888888;
+}
+
+.form-group label {
+    color: #6b6b6b;
+}
+
+/* Information groups */
+.info-group {
+    margin-bottom: 1em;
+}
+.info-group .info-label {
+    color: #B1B2B4;
+    min-height: 1em;
+}
+.info-group .info-label .info-icon {
+    font-size: 1.3em;
+    position: relative;
+    top: 0.3em;
+    padding-right: 0.5em;
+}
+.info-group .info-value {
+    font-size: 1.1em;
+    margin-left: 1.7em;
+    margin-top: 0.2em;
+    min-height: 1.4em; /* To function correctly with CSS Grid systems (i.e. Bootstrap Columns) */
+}
+
+.info-tab-container .nav-tabs {
+    text-align:center;
+}
+
+.info-tab-container .nav-tabs > li {
+    float:none;
+    display:inline-block;
+    zoom:1;
+}
+
+/* Override Bootstrap 3 pill styling */
+.info-tab-container .nav-pills > li.active > a,
+.info-tab-container .nav-pills > li.active > a:hover,
+.info-tab-container .nav-pills > li.active > a:focus,
+.info-tab-container .nav > li {
+    background-color: initial;
+}
+
+.info-tab-container .nav {
+    text-align: center;
+}
+
+.info-tab-container .nav > li {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.info-tab-container .nav > li, .info-tab-container .nav > li > a {
+    color: #B1B2B4;
+}
+
+.info-tab-container .nav > li.active > a {
+    color: #676a6c;
+}
+
+.info-tab-container .nav > li.active {
+    border: none;
+    border-bottom: 4px solid #19aa8d;
+}
+
+.info-tab-container .nav > li > a:hover,
+.info-tab-container .nav > li > a:focus {
+    background-color: initial;
+}
+
+.info-tab-container .nav > li:not(.active) {
+    border-bottom: 4px solid transparent;
+}
+
+.info-tab-container .nav > li:not(.active):hover,
+.info-tab-container .nav > li:not(.active):focus {
+    border-bottom-color: #19aa8d85;
+}
+
+.tabs-container .tab-content > .tab-pane,
+.tabs-container .pill-content > .pill-pane {
+  display: none;
+}
+
+.tabs-container .tab-content > .active,
+.tabs-container .pill-content > .active {
+  display: block;
+}
+
+ul.icon-list, ol.icon-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.icon-list li:not(:first-child) {
+    margin-top: 3px;
+}
