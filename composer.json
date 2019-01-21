@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
 	"name": "deltoss/sentinel-centurion",
-    "description": "An opinionated GUI Laravel 5 implementation for Cartalyst's Sentinel",
+    "description": "An opinionated GUI Laravel 5 implementation for Cartalyst's Sentinel.",
     "keywords": ["laravel", "sentinel", "auth"],
     "homepage" : "https://github.com/deltoss/sentinel-database-permissions",
     "license": "MIT",
