@@ -1,6 +1,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![made-with-docsify](https://img.shields.io/badge/Made%20with-Docsify-green.svg)](https://shields.io/)
 
+![Sentinel Centurion Demo](docs/Sentinel&#32;Centurion&#32;Demo.gif)
+
 # Introduction
 A [Laravel](https://github.com/laravel/laravel) package that provides opinionated authentication scaffolding using [Cartalyst Sentinel](https://cartalyst.com/manual/sentinel/2.0). It provides various features out of the box, and is designed so that you can extend pretty much anything such as the layout, routes, controllers actions, views, and so on.
 
