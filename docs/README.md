@@ -27,32 +27,32 @@ A [Laravel](https://github.com/laravel/laravel) package that provides opinionate
 
 **Install the package using composer**
 
-```shell
+```bash
 $ composer require deltoss/sentinel-centurion
 ```
 
 **Delete the default Laravel auth files using the below command**
-```shell
+```bash
 $ php artisan centurion:spruce
 ```
 
 **If you haven't done so already, publish the Sentinel assets**
-```shell
+```bash
 $ php artisan vendor:publish --provider='Cartalyst\Sentinel\Laravel\SentinelServiceProvider'
 ```
 
 **Run your database migrations**
-```shell
+```bash
 $ php artisan migrate
 ```
 
 **Publish the Centurion assets (js and css files)**
-```shell
+```bash
 $ php artisan vendor:publish --provider='Deltoss\Centurion\Providers\CenturionServiceProvider' --tag=public
 ```
 
 **Call the below command to seed the initial Centurion data to the database.**
-```shell
+```bash
 php artisan db:seed --class=Deltoss\Centurion\Seeders\CenturionDatabaseSeeder
 ```
 Alternatively you can call the Centurion seeder from your own seeder files. For more information, see the [seeder](#seeder) section.
@@ -118,7 +118,7 @@ Route::middleware(['centurion.auth', 'centurion.hasaccess:editroles'])->group(fu
 # Seeding
 
 There are two approaches you can set up Centurion seeders. First is simply calling the below PHP artisan command:
-```shell
+```bash
 php artisan db:seed --class=Deltoss\Centurion\Seeders\CenturionDatabaseSeeder
 ```
 
@@ -156,14 +156,14 @@ After setting up the seeder, you can use `php artisan db:seed`, `php artisan mig
 ## Configurations
 There are various configurations with Centurion. You can publish the config file and tweak the default Centurion behaviour using the below command:
 
-```shell
+```bash
 $ php artisan vendor:publish --provider='Deltoss\Centurion\Providers\CenturionServiceProvider' --tag=config
 ```
 
 ## Views
 You can copy over the views with the below command, and then override it as necessary. This will publish the Centurion views into your `resources/views/vendor/centurion` folder.
 
-```shell
+```bash
 $ php artisan vendor:publish --provider='Deltoss\Centurion\Providers\CenturionServiceProvider' --tag=views
 ```
 
@@ -198,7 +198,7 @@ You can add routes to your in `routes/web.php` file. This way, you can also over
 
 You can publish the Centurion routes to `routes/vendor/centurion` folder using the below command:
 
-```shell
+```bash
 $ php artisan vendor:publish --provider='Deltoss\Centurion\Providers\CenturionServiceProvider' --tag=routes
 ```
 
@@ -208,7 +208,7 @@ From the route files within `routes/vendor/centurion`, you can add additional ro
 You may want to override Centurion controllers for adding/modifying additional business logic.
 
 Create a controller with the below artisan command:
-```shell
+```bash
 php artisan make:controller UserController
 ```
 
@@ -264,7 +264,7 @@ Centurion users Illuminates **FormRequest** classes. First, you'll need to creat
      From the above code, we know the `Deltoss\Centurion\Http\Requests\Users\UpdateUserRequest` was used for the update method, called when updating details for a user.
 
 Now that we know the target Centurion FormRequest class to override, lets make a new FormRequest class using the below command:
-```shell
+```bash
 $ php artisan make:request AppUpdateUserRequest
 ```
 
@@ -370,7 +370,7 @@ Centurion has migration files to modify existing Sentinel tables for additional 
 
 It's optional to publish those migrations, as the Centurion migrations would be automatically executed when you run the `php artisan migrate` or related commands. It's generally a better approach to instead add new migrations if you'd like to adjust/remove features. To publish migrations, use the below command:
 
-```shell
+```bash
 $ php artisan vendor:publish --provider='Deltoss\Centurion\Providers\CenturionServiceProvider' --tag=migrations
 ```
 
@@ -434,7 +434,7 @@ After setting up the seeder, you can use `php artisan db:seed`, `php artisan mig
 ## Translations
 Centurion utilises Laravel default translation system. You can easily publish those translations, and add/modify translations as per Laravel translation documentation. To publish the Centurion translations, use the below command:
 
-```shell
+```bash
 $ php artisan vendor:publish --provider='Deltoss\Centurion\Providers\CenturionServiceProvider' --tag=translations
 ```
 
