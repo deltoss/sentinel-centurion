@@ -27,28 +27,30 @@ A [Laravel](https://github.com/laravel/laravel) package that provides opinionate
 
 # Quick Start with New Laravel App
 
-**Install the package using composer**
+**Install the package using composer.**
 
 ```bash
 $ composer require deltoss/sentinel-centurion
 ```
 
-**Delete the default Laravel auth files using the below command**
+**Delete the default Laravel auth files using the below command.**
 ```bash
 $ php artisan centurion:spruce
 ```
 
-**If you haven't done so already, publish the Sentinel assets**
+Note this doesn't completely get rid of Laravel authentication files. To do a complete clean up, you can manually remove the default Laravel Authentication middleware files, and remove the entries in the `app/Http/Kernel.php` as well.
+
+**If you haven't done so already, publish the Sentinel assets.**
 ```bash
 $ php artisan vendor:publish --provider='Cartalyst\Sentinel\Laravel\SentinelServiceProvider'
 ```
 
-**Run your database migrations**
+**Run your database migrations.**
 ```bash
 $ php artisan migrate
 ```
 
-**Publish the Centurion assets (js and css files)**
+**Publish the Centurion assets (js and css files).**
 ```bash
 $ php artisan vendor:publish --provider='Deltoss\Centurion\Providers\CenturionServiceProvider' --tag=public
 ```
@@ -59,8 +61,7 @@ php artisan db:seed --class=Deltoss\Centurion\Seeders\CenturionDatabaseSeeder
 ```
 Alternatively you can call the Centurion seeder from your own seeder files. For more information, see the [seeder](#seeder) section.
 
-**For Centurion to send password recovery and activation emails, add your mail server to your `.env` file**
-It could look something like this:
+**For Centurion to send password recovery and activation emails, add your mail server to your `.env` file. It's recommended to use MailTrap for development, as it's easy to test. It could look something like this:**
 ```
 MAIL_DRIVER=smtp
 MAIL_HOST=smtp.mailtrap.io
