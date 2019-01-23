@@ -157,6 +157,7 @@ After setting up the seeder, you can use `php artisan db:seed`, `php artisan mig
 # Extending Centurion
 
 ## Configurations
+
 There are various configurations with Centurion. You can publish the config file and tweak the default Centurion behaviour using the below command:
 
 ```bash
@@ -164,6 +165,7 @@ $ php artisan vendor:publish --provider='Deltoss\Centurion\Providers\CenturionSe
 ```
 
 ## Views
+
 You can copy over the views with the below command, and then override it as necessary. This will publish the Centurion views into your `resources/views/vendor/centurion` folder.
 
 ```bash
@@ -182,6 +184,7 @@ You can also change the centurion layouts through changing the following views:
 `auth_layout.blade.php` and `layouts/main_layout.blade.php` can be adjusted to point to a different layout file (e.g. your application main layout) to change the look and feel of Centurion.
 
 ## Mails
+
 After you publish the Centurion [views](#extending-views), you'll also see that there would be a `resources/views/vendor/mails` folder, defining the look and feel for the various emails that Centurion uses.
 
 ## Models
@@ -189,6 +192,7 @@ After you publish the Centurion [views](#extending-views), you'll also see that 
 Refer to the `Sentinel Database Permissions` package if you want to extend the models.
 
 ## Routes
+
 You have several options with overriding/adding Centurion routes. 
   * You can publish the Centurion routes, then add/override/remove routes there.
   * The other method is to add routes to your in `routes/web.php` file
@@ -208,6 +212,7 @@ $ php artisan vendor:publish --provider='Deltoss\Centurion\Providers\CenturionSe
 From the route files within `routes/vendor/centurion`, you can add additional routes, override existing ones, or even remove routes entirely.
 
 ## Controllers
+
 You may want to override Centurion controllers for adding/modifying additional business logic.
 
 Create a controller with the below artisan command:
@@ -234,6 +239,7 @@ class UserController extends CenturionUserController
 With the above code, we override the index method, but now we also need to update our routes so the previous Centurion route would be overridden so it'd point to the new index method. For more information, refer to [routes](#extending-routes).
 
 ## Validations
+
 Centurion users Illuminates **FormRequest** classes. First, you'll need to create a FormRequest class that inherits from an existing Centurion FormRequest class. To know which Centurion FormRequest to inherit from, you'll need to peek around the Centurion source code (either looking at your `vendor` folder or online repository), namely:
   1. Look into the Centurion Controller which you want to adjust validation logic for.
   2. Find the affected action(s) you want to override validation logic for.
@@ -367,6 +373,7 @@ Note you'll now need to override your Centurion routes so that it'll point to th
 ```
 
 ## Migrations
+
 Centurion has migration files to modify existing Sentinel tables for additional features, including:
   * Changing password upon activation for accounts created by Administrators
   * Switching the content of the activation email sent to users based on whether their account was created by Administrators or not.
@@ -380,6 +387,7 @@ $ php artisan vendor:publish --provider='Deltoss\Centurion\Providers\CenturionSe
 If you're looking to modify migration files for database permissions, then you should look into the `Sentinel Database Permissions` package and their documentation.
 
 ## Seeders
+
 Centurion seeders are provided to make seeding dummy data which makes it quicker to set up your authentication data.
 
 You can call the Centurion seeder classes from your own database seeders. Below is how you may set up your Laravel `DatabaseSeeder` class to call Centurion seeders.
@@ -435,6 +443,7 @@ class DatabaseSeeder extends Seeder
 After setting up the seeder, you can use `php artisan db:seed`, `php artisan migrate --seed` or `php artisan migrate:refresh --seed` command to seed the data.
 
 ## Translations
+
 Centurion utilises Laravel default translation system. You can easily publish those translations, and add/modify translations as per Laravel translation documentation. To publish the Centurion translations, use the below command:
 
 ```bash
@@ -444,20 +453,24 @@ $ php artisan vendor:publish --provider='Deltoss\Centurion\Providers\CenturionSe
 At this stage, only English is available out of the box.
 
 # CAPTCHA
+
 This project utilises a package called `no-captcha`, which implements Google reCAPTCHA For Laravel.
 
 CAPTCHA is the human validation test to prevent bots from spamming websites. This is done through providing images of letters unreadable to bots, where users enter the letters.
 
 ## reCAPTCHA
+
 reCAPTCHA offers more than just spam protection. Every time CAPTCHAs are solved, that human effort helps digitize text, annotate images, and build machine learning datasets. This in turn helps preserve books, improve maps, and solve hard AI problems.
 
 ## No-CAPTCHA Package
+
 For this project, we use the "no-captcha" package which integrates Google reCAPTCHA with Laravel.
 Refer to the [githib repository page](https://github.com/anhskohbo/no-captcha) for more information
 
 Note that you must either register for an API key, or alternatively use the development key provided by Google.
 
 ## Development reCAPTCHA API Key for Testing
+
 With the following test keys, you will always get No CAPTCHA and all verification requests will pass.
 
 ```
@@ -467,6 +480,7 @@ Secret key: 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
 The reCAPTCHA widget will show a warning message to ensure it's not used for production traffic.
 
 ## Create your reCAPTCHA API Key
+
 This requires you to have a Google account. For business purposes, it's recommended for you to create a business Google account, or you can register a google account with your business email.
 
 Simply go to this [site](https://www.google.com/recaptcha/admin), and follow through the wizard, and you should get your reCAPTCHA API key.
@@ -476,6 +490,7 @@ Note that you'd need to register your site to the CAPTCHA API key. For developme
 For more information, see this link [here](https://developers.google.com/recaptcha/docs/domain_validation)
 
 ## Enabling reCAPTCHA
+
 For Centurion to use Google reCAPTCHA. Add your Google reCAPTCHA keys to your ".env" file.
 ```
 NOCAPTCHA_SITEKEY=YOURSITEKEY
