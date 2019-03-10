@@ -15,7 +15,7 @@ A [Laravel](https://github.com/laravel/laravel) package that provides opinionate
 
 # Documentation
 
-The project documentation can be found in the repo's [GitHub pages](https://deltoss.github.io/sentinel-centurion/)
+The project documentation can be found in the repo's [Netlify site](https://sentinel-centurion.netlify.com)
 
 # License
 
